@@ -29,3 +29,29 @@ function createDeleteButton(parent) {
 function toggleDoneClass() {
     this.classList.toggle("done");
 }
+
+//Create the "li" with everything it needs inside of it(text ,button, class)
+function createListElement() {
+    //Create "li"
+    let li = document.createElement("li");
+    let span = document.createElement("span");
+    // Create text for the li according to what you put in the input
+    li.appendChild(span);
+    span.appendChild(document.createTextNode(input.value));
+    // Append or insert the new li to the ul
+    ul.appendChild(li);
+
+    //Create the delete button calling the funtion with the new li
+    createDeleteButton(li);
+    //Updates the selector to the new number of buttons with class=delete
+    deleteButton = document.querySelectorAll(".delete")
+
+    //Applies the functionality to remove the li
+    updateDeleteButtons()
+
+    //add the click listener to toggle class=done
+    li.addEventListener('click', toggleDoneClass)
+
+    //Makes the input go back to blank when this function is done
+    input.value = "";
+}
