@@ -18,6 +18,13 @@ $(function() {
         item.appeandTo(list);
     }
 
+    $('#addHave, #addNeed').click(callback);
+
+    $('ul').on('click', 'li a', function(event) {
+        $(event.target).parent('li').remove();
+    });
+
+    
 
 
 });
