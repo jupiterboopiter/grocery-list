@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grocery List</title>
+</head>
+
+
+<body>
+    <h1>Shopping List</h1>
+    <form action="add" method="get">
+        <label>Add Item: </label>
+        <input type="text" name="item">
+        <input id="addNeed" type="submit" value="Need">
+        <input id="addHave" type="submit" value="Have">
+    </form>
+
+    <h2>Need: </h2>
+        <ul class="list">
+            <li><input type="checkbox" name="item"> Juice <a href="#">&#10006</a></li>
+            <li><input type="checkbox" name="item"> Milk <a href="#">&#10006</a></li>
+            <li><input type="checkbox" name="item"> Wet Cat Food <a href="#">&#10006</a></li>
+            <li><input type="checkbox" name="item"> French Bread <a href="#">&#10006</a></li>
+        </ul>
+
+        <h2>Have: </h2>
+            <ul class="list">
+                <li><input type="checkbox" name="item" checked> Chicken Breast <a href="#">&#10006;</a></li>
+                <li><input type="checkbox" name="item" checked> Cream <a href="#">&#10006;</a></li>
+                <li><input type="checkbox" name="item" checked> Pasta <a href="#">&#10006;</a></li>
+                <li><input type="checkbox" name="item" checked> Peaches <a href="#">&#10006;</a></li>
+            </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
