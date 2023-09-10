@@ -24,7 +24,9 @@ $(function() {
         $(event.target).parent('li').remove();
     });
 
-    
-
-
+    $('ul').on('click', 'input[type=checkbox]', function(event) {
+        let listItem = $(event.target).parent('li'),
+            list = (event.target.checked) ? $('ul').last() : $('ul').first();
+        listItem.appeandTo(list);
+    });
 });
